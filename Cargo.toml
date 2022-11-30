@@ -1,0 +1,15 @@
+[package]
+name = "sorting-visualisation"
+version = "0.1.0"
+authors = ["Daniel Svensson <daniels5@kth.se>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+piston_window = "0.127.0"
+piston = "0.53.0"
+piston2d-graphics = "0.43.0"
+pistoncore-glutin_window = "0.70.1"
+piston2d-opengl_graphics = "0.82.0"
+rand = "0.8.5"
