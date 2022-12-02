@@ -27,7 +27,7 @@ fn createRects(points: &Vec<(u32,bool)>) -> Vec<[f64;4]>{
 }
 
 pub struct App {
-    gl: GlGraphics, // OpenGL drawing backend.
+    gl: GlGraphics, // OpenGL drawing backend.s
     data_points: Vec<(u32,bool)>,
     events: Events,
     window: Window,
@@ -87,13 +87,15 @@ impl App {
     }
     fn sort_selection(&mut self){
         
+        
         //let mut i;
         //let mut j;
     
         for i in 0..self.data_points.len(){
-            
+            thread::sleep(Duration::from_millis(1));
             let mut min = i;
             for j in i+1..self.data_points.len(){
+                
                 if (self.data_points[j] < self.data_points[min]){
                     min = j;
                 }
@@ -116,7 +118,7 @@ impl App {
     }
 
     fn merge_sort( &mut self,list: Vec<(u32, bool)>) -> Vec<(u32, bool)>{
-        thread::sleep(Duration::from_millis(1));
+        thread::sleep(Duration::from_millis(10));
         if list.len() <= 1{
             return list;
         }
